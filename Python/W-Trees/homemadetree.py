@@ -1,9 +1,24 @@
 class Tree:
-    def __init__(self):
+    def __init__(self, array=None, parcours=None):
         self.left = None
         self.right = None
         self.data = None
-    
+        if array is not None:
+            self.makeTreeFromArray(array, parcours)
+        
+    def makeTreeFromArray(self, array, parcours):
+        if len(array) == 0:
+            self.emptyTree()
+        else:
+            if parcours == "prefix":
+                pass
+            elif parcours == "infix":
+                pass
+            elif parcours == "postfix":
+                pass
+            else:
+                raise ValueError("parcours is not valid")
+
     def emptyTree(self):
         self.left = None
         self.right = None
